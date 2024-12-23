@@ -441,9 +441,6 @@ function Graph() {
         const newWidth = Math.ceil(containerRef.current.getBoundingClientRect().width);
         const newHeight = Math.ceil(containerRef.current.getBoundingClientRect().height);
         
-        console.log(`Dimensions: ${prevWidth}x${prevHeight} -> ${newWidth}x${newHeight}`);
-        console.log(`Current viewport before calc: x=(${viewport.xMin}, ${viewport.xMax}) y=(${viewport.yMin}, ${viewport.yMax})`);
-
         // Do viewport calculations with the actual previous values
         const xAvg = (currentViewport.xMin + currentViewport.xMax) / 2;
         const yAvg = (currentViewport.yMin + currentViewport.yMax) / 2;
@@ -455,8 +452,6 @@ function Graph() {
           yMax: (currentViewport.yMax - yAvg) * newHeight / prevHeight + yAvg
         };
     
-        console.log(`Calculated new viewport: x=(${newViewport.xMin}, ${newViewport.xMax}) y=(${newViewport.yMin}, ${newViewport.yMax})`);
-
         // Update canvas size after calculations
         canvasRef.current.width = newWidth;
         canvasRef.current.height = newHeight;
@@ -476,7 +471,6 @@ function Graph() {
         functionObj.memo = e.data;
         resolve();
       };
-      console.log(`updating memo with xMin=${viewport.xMin}, xMax=${viewport.xMax}`);
       functionObj.memoWorker.postMessage({
         canvasWidth: canvasRef.current.width,
         viewPort: viewport
@@ -487,17 +481,14 @@ function Graph() {
   }
 
   useEffect(() => {
-    console.log(`viewport useEffect with x=(${viewport.xMin}, ${viewport.xMax}) y=(${viewport.yMin}, ${viewport.yMax})`);
     setLineWidth();
     drawGraph();
     for (let i = 0; i < functions.current.length; i++) {
       updateMemo(functions.current[i], (i == functions.current.length - 1));
     }
-    console.log(`viewport useEffect ended with x=(${viewport.xMin}, ${viewport.xMax}) y=(${viewport.yMin}, ${viewport.yMax})`);
   }, [viewport]);
 
   useEffect(() => {
-    console.log("graph mounted");
     const preventZoom = (e) => {
       if (e.ctrlKey || e.metaKey) {
         e.preventDefault();
@@ -508,7 +499,6 @@ function Graph() {
         canvasRef.current.width = containerRef.current.getBoundingClientRect().width;
         canvasRef.current.height = containerRef.current.getBoundingClientRect().height;
         const aspectRatio = containerRef.current.getBoundingClientRect().height / containerRef.current.getBoundingClientRect().width;
-        console.log(`initial aspect ratio: ${aspectRatio}`);
         setViewport({
           xMin: -12,
           xMax: 12,
@@ -520,7 +510,6 @@ function Graph() {
     window.addEventListener("resize", resize);
     window.addEventListener("wheel", preventZoom, { passive: false });
     return () => {
-      console.log("graph unmounted");
       window.removeEventListener("resize", resize);
       window.removeEventListener("wheel", preventZoom);
       if (functions.current.length !== 0) {

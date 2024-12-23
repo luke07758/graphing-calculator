@@ -1,8 +1,6 @@
 import {useState, useRef, useEffect} from "react";
 import styles from "./FunctionList.module.css";
 
-// TODO: Polish UI
-// TODO: add more settings
 const defaultColors = ["#2196F3", "#E81E62", "#009688", "#673AB7", "#CDDC39"];
 function FunctionList(props) {
   const [functions, setFunctions] = useState([{name: "f", color: "#2196F3", value: ""}]);
@@ -39,8 +37,6 @@ function FunctionList(props) {
     const functionsCopy = [...functions];
     functionsCopy[index].value = changedInput;
     setFunctions(functionsCopy);
-    // TODO: fix moving cursor position
-    //if (selectionIndex) cursorPos.current = {index: index, pos: selectionIndex};
     parseFunction(changedInput, index);
   };
 
