@@ -2,6 +2,10 @@
 
 A simple React graphing calculator, using recursive descent parsing.
 
+## Demo
+
+You can try this project on my website at [lukenelson.io/projects/graph](https://lukenelson.io/projects/graph)
+
 ## Installation
 
 Install the module into your project with `npm`

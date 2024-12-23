@@ -1,6 +1,6 @@
 {
   "name": "graphing-calculator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React graphing calculator",
   "type": "module",
   "main": "dist/index.js",
