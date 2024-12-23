@@ -1,0 +1,47 @@
+{
+  "name": "graphing-calculator",
+  "version": "0.1.0",
+  "description": "React graphing calculator",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "/dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./styles": "./dist/index.css"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "scripts": {
+    "build": "rm -rf dist && rollup -c"
+  },
+  "author": "Luke Nelson",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "autoprefixer": "^10.4.20",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rollup": "^4.28.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-string": "^3.0.0"
+  },
+  "dependencies": {
+    "rollup-plugin-string": "^3.0.0"
+  }
+}

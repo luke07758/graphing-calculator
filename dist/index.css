@@ -1,0 +1,224 @@
+.GraphSettings-module_settings-container__wisld {
+  border-radius: 15px;
+  background-color: rgba(230,230,230,0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  overflow: hidden;
+  transition: width 0.5s ease, height 0.5s ease;
+  padding: 10px;
+  /* height: 60px; */
+}
+.GraphSettings-module_title-wrapper__EA7JM {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.GraphSettings-module_settings-title__XxT1f {
+  font-size: 28px;
+  margin-left: 10px;
+}
+.GraphSettings-module_settings-icon__SJUGi {
+  cursor: pointer;
+  height: 40px;
+  transition: transform 0.5s ease;
+}
+.GraphSettings-module_rotated__tcFbw {
+  transform: rotate(-315deg);
+}
+hr {
+  margin-top: 10px;
+}
+
+.GraphSettings-module_switch__deG6X {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.GraphSettings-module_switch__deG6X input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.GraphSettings-module_slider__hxYej {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  width: 60px;
+}
+.GraphSettings-module_slider__hxYej:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+input:checked + .GraphSettings-module_slider__hxYej {
+  background-color: #2196f3;
+}
+input:focus + .GraphSettings-module_slider__hxYej {
+  box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .GraphSettings-module_slider__hxYej:before {
+  transform: translateX(26px);
+}
+
+.GraphSettings-module_slider__hxYej.GraphSettings-module_round__As4zq {
+  border-radius: 34px;
+}
+.GraphSettings-module_slider__hxYej.GraphSettings-module_round__As4zq:before {
+  border-radius: 50%;
+}
+
+.GraphSettings-module_viewport-button-light__PZlbq {
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ccc;
+}
+.GraphSettings-module_viewport-button-light__PZlbq:hover {
+  background-color: #bbb;
+}
+.GraphSettings-module_viewport-button-dark__t3VsU {
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #777;
+}
+.GraphSettings-module_viewport-button-dark__t3VsU:hover {
+  background-color: #888;
+}
+.GraphSettings-module_range-input__3vXbk:focus {
+  outline-color: var(--focus-color) !important;
+}
+.FunctionList-module_dark__UFeDm {
+  color: #fff;
+}
+.FunctionList-module_light__uBNRD {
+  color: #000;
+}
+.FunctionList-module_color-div__lRFOz {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+.FunctionList-module_color-input__OPdSf {
+  outline: none;
+  border: none;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.FunctionList-module_function-name__G6du6 {
+  font-size: 28px;
+  min-width: 100px;
+  width: 100px;
+  text-align: right;
+}
+.FunctionList-module_functions-wrapper__EMNR1 {
+  border-radius: 15px;
+  /* display: flex; */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  overflow: hidden;
+  transition: width 0.5s ease, height 0.5s ease;
+  padding: 0;
+  height: 85px;
+  max-height: 90vh;
+  width: 100%;
+}
+.FunctionList-module_function-container__eiDim {
+  background-color: rgba(0,0,0,0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28px;
+  font-family: 'Latin Modern Math';
+  margin-right: 20px;
+}
+.FunctionList-module_function-container__eiDim:focus {
+  border: 1px solid black;
+}
+.FunctionList-module_function-input__JSOt1 {
+  flex-grow: 1;
+  background-color: rgba(0,0,0,0);
+  height: 40px;
+  width: 40px;
+  font-size: 28px;
+  font-family: 'Latin Modern Math';
+  border: none;
+  margin-right: 10px;
+}
+.FunctionList-module_function-container__eiDim input:focus {
+  outline: none;
+}
+input[type="color"]::-moz-color-swatch {
+  border: none;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+.FunctionList-module_list-icon__4UAcp {
+  position: absolute;
+  top: 10px;
+  height: 40px;
+  width: 40px;
+  right: 0;
+  border-radius: 30px;
+  z-index: 10;
+  transform: translateX(50%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+.FunctionList-module_functions__EQf2M {
+  position: relative;
+  transition: width 0.5s ease;
+  width: 0;
+}
+.FunctionList-module_functions__EQf2M.FunctionList-module_active__akhMJ {
+  width: 58vw;
+  max-width: 400px;
+}
+@font-face {
+  font-family: 'Latin Modern Math';
+  src: local('Latin Modern Math'), url('https://fonts.cdnfonts.com/s/89532/LatinmodernmathRegular-z8EBa.woff') format('woff');
+}
+.Graph-module_container__0BseX {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.Graph-module_settings__57jd1 {
+  top: 20px;
+  right: 20px;
+  /* left: auto; */
+  /* background-color: white; */
+  position: absolute;
+  height: 60px;
+  /* width: 60px; */
+  z-index: 20;
+}
+.Graph-module_function-list__0QEFy {
+  background-color: rgba(0,0,0,0);
+  top: 20px;
+  left: 20px;
+  position: absolute;
+}
+canvas {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
